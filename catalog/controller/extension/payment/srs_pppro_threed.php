@@ -1,11 +1,11 @@
 <?php
-class ControllerPaymentSrsPpproThreed extends Controller {
+class ControllerExtensionPaymentSrsPpproThreed extends Controller {
  
  	protected $data;
 
     public function index() {
 
-        $this->language->load('payment/srs_pppro_threed');
+        $this->language->load('extension/payment/srs_pppro_threed');
 
         $order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
@@ -99,7 +99,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 
 
 
-		return $this->load->view('payment/srs_pppro_threed', $this->data);
+		return $this->load->view('extension/payment/srs_pppro_threed', $this->data);
 
 
 
@@ -109,7 +109,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 	public function step1() {
 
         
-        $this->language->load('payment/srs_pppro_threed');
+        $this->language->load('extension/payment/srs_pppro_threed');
 
 		require_once('centinel/CentinelClient.php');
 		require_once('centinel/CentinelConfig.php');
@@ -369,7 +369,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 
 			$_SESSION['Centinel_OrderId']       =    $centinelClient->getValue('OrderId');
 
-			$this->response->redirect($this->url->link('payment/srs_pppro_threed/srs_3d_frame', '', true)); // js redirect removed
+			$this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/srs_3d_frame', '', true)); // js redirect removed
 
 		} else {
 
@@ -381,7 +381,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 				/* authorization.                                                 */
 				/******************************************************************/
 
-				$this->response->redirect($this->url->link('payment/srs_pppro_threed/doDirect', '', true)); // js redirect removed
+				$this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/doDirect', '', true)); // js redirect removed
 		}
             	  
     }// setp1 over
@@ -393,14 +393,14 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 		require_once('centinel/CentinelConfig.php');
 		require_once('centinel/CentinelUtility.php');
 
-        $this->language->load('payment/srs_pppro_threed');
+        $this->language->load('extension/payment/srs_pppro_threed');
         $this->id = 'payment';
-		$this->load->model('payment/srs_pppro_threed');
+		$this->load->model('extension/payment/srs_pppro_threed');
  
 		if( !isset($_SESSION["Centinel_OrderId"]) ) {
 
 			clearCentinelSession();
-			$this->response->redirect($this->url->link('payment/srs_pppro_threed/authenticate_error', '', true)); 
+			$this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/authenticate_error', '', true));
  		}
 
 		$this->log("Payment frame Session " , $_SESSION);
@@ -416,7 +416,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 		$this->data['column_left'] = $this->load->controller('common/column_left');
 		$this->data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('payment/srs_3d_frame', $this->data));
+		$this->response->setOutput($this->load->view('extension/payment/srs_3d_frame', $this->data));
 
 
     }// frame over
@@ -428,9 +428,9 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 	    require_once('centinel/CentinelConfig.php');
 	    require_once('centinel/CentinelUtility.php');
 
-        $this->language->load('payment/srs_pppro_threed');
+        $this->language->load('extension/payment/srs_pppro_threed');
         $this->id = 'payment';
-		$this->load->model('payment/srs_pppro_threed');
+		$this->load->model('extension/payment/srs_pppro_threed');
 
 		if (!isset($_SESSION["Centinel_TransactionId"])) {
 
@@ -447,7 +447,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
         $this->log( "Payment Inner frame Session " , $_SESSION );
 
 
- 		$this->response->setOutput($this->load->view('payment/srs_innerframe', $this->data));
+ 		$this->response->setOutput($this->load->view('extension/payment/srs_innerframe', $this->data));
 
 
 	}
@@ -459,9 +459,9 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 		require_once('centinel/CentinelConfig.php');
 		require_once('centinel/CallerService.php');
                 
-        $this->language->load('payment/srs_pppro_threed');
+        $this->language->load('extension/payment/srs_pppro_threed');
         $this->id = 'payment';
-		$this->load->model('payment/srs_pppro_threed');
+		$this->load->model('extension/payment/srs_pppro_threed');
 
 		/**
 		* Get required parameters from the web form for the request
@@ -567,7 +567,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
  
 		if($ack!="SUCCESS" && $ack!="SUCCESSWITHWARNING")  {
 			$_SESSION['reshash']=$resArray;
-			$this->response->redirect($this->url->link('payment/srs_pppro_threed/dodirect_error', '', true)); 
+			$this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/dodirect_error', '', true));
 
 		}
 
@@ -641,16 +641,16 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 
     public function dodirect_error() {
 
-        $this->language->load('payment/srs_pppro_threed');
+        $this->language->load('extension/payment/srs_pppro_threed');
         $this->id = 'payment';
-		$this->load->model('payment/srs_pppro_threed');
+		$this->load->model('extension/payment/srs_pppro_threed');
 
 		$this->data['header'] = $this->load->controller('common/header');
 		$this->data['column_left'] = $this->load->controller('common/column_left');
 		$this->data['footer'] = $this->load->controller('common/footer');
 
 
-		return $this->load->view('payment/dodirect_error', $this->data);
+		return $this->load->view('extension/payment/dodirect_error', $this->data);
          
 
     }// dodirect_error
@@ -664,9 +664,9 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 				
 		$success = false;
 
-		$this->language->load('payment/srs_pppro_threed');
+		$this->language->load('extension/payment/srs_pppro_threed');
 		$this->id = 'payment';
-		$this->load->model('payment/srs_pppro_threed');
+		$this->load->model('extension/payment/srs_pppro_threed');
 		
 	    /********************************************************************************************/
 	    /* Retrieve the PaRes and MD values from the Card Issuer's Form POST to this Term URL page. */
@@ -762,7 +762,7 @@ class ControllerPaymentSrsPpproThreed extends Controller {
 			$this->log( "Payment srs_authenticate  " , $_SESSION );
 			$success = false;
 			clearCentinelSession();
-			$this->response->redirect($this->url->link('payment/srs_pppro_threed/authenticate_error', '', true)); 
+			$this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/authenticate_error', '', true));
 		}
 				 
   
@@ -797,12 +797,12 @@ class ControllerPaymentSrsPpproThreed extends Controller {
                 
 		if($success == true) {
 		
-			$this->response->redirect($this->url->link('payment/srs_pppro_threed/doDirect', '', true));
+			$this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/doDirect', '', true));
  		
 		} else {
 
 			clearCentinelSession();	
-            $this->response->redirect($this->url->link('payment/srs_pppro_threed/authenticate_error', '', true)); 
+            $this->response->redirect($this->url->link('extension/payment/srs_pppro_threed/authenticate_error', '', true));
 
 		}
 

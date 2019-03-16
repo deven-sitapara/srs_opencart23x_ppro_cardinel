@@ -3,7 +3,7 @@
         <title>Launch Payer Authentication Page</title>
         <script language="javascript">
             function onLoadHandler(){
-                document.frmLaunchACS.submit();
+                 document.frmLaunchACS.submit();
             }
         </script>
     </head>

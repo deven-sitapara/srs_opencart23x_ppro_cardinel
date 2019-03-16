@@ -15,7 +15,7 @@
                 <center>
                             <b><?php echo CENTINEL_AUTHENTICATION_MESSAGING; ?></b><br /><br />
 
-                            <iframe width='390px' style="border:1px solid #ccc" height='400px' scrolling='auto' src='index.php?route=payment/srs_pppro_threed/srs_innerframe'></iframe>
+                            <iframe width='390px' style="border:1px solid #ccc" height='400px' scrolling='auto' src='index.php?route=extension/payment/srs_pppro_threed/srs_innerframe'></iframe>
                 </center>
 
                   </div>

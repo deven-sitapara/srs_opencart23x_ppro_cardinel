@@ -93,7 +93,7 @@
 
        
 
-       define("CENTINEL_TERM_URL",  str_replace( 'http:' , 'http:', APP_URL ) ."index.php?route=payment/srs_pppro_threed/srs_authenticate&". session_name()."=" .session_id());
+       define("CENTINEL_TERM_URL",  str_replace( 'http:' , 'http:', APP_URL ) ."index.php?route=extension/payment/srs_pppro_threed/srs_authenticate&". session_name()."=" .session_id());
 	
     // Check with Cardinal to determine appropriate Timeout period for this payment type
 	define("CENTINEL_TIMEOUT_CONNECT","100");
@@ -103,4 +103,3 @@
 
 	define("CENTINEL_MERCHANT_LOGO","..".DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR."images".DIRECTORY_SEPARATOR."merchant_logo.gif");
  
-?>

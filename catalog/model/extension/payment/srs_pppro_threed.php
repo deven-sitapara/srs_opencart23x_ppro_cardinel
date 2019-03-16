@@ -1,7 +1,7 @@
 <?php
-class ModelPaymentSrsPpproThreed extends Model {
+class ModelExtensionPaymentSrsPpproThreed extends Model {
   public function getMethod($address, $total) {
-    $this->load->language('payment/srs_pppro_threed');
+    $this->load->language('extension/payment/srs_pppro_threed');
 
     $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->config->get('srs_pppro_threed_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int)$address['zone_id'] . "' OR zone_id = '0')");
 

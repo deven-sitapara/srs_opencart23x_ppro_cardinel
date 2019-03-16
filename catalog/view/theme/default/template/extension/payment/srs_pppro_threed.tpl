@@ -1,4 +1,4 @@
-<form class="form-horizontal" name="srs_submit" id="srs_submit" action="<?php echo HTTPS_SERVER ;?>index.php?route=payment/srs_pppro_threed/step1" method="post" >
+<form class="form-horizontal" name="srs_submit" id="srs_submit" action="<?php echo HTTPS_SERVER ;?>index.php?route=extension/payment/srs_pppro_threed/step1" method="post" >
     <fieldset id="payment">
       <legend><?php echo $text_credit_card; ?></legend>
       <div class="form-group required">
