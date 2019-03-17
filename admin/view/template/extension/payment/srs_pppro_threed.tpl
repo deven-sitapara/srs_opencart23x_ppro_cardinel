@@ -87,20 +87,6 @@
             </div>
           </div>
 
-
-
-        <div class="form-group required">
-            <label class="col-sm-2 control-label" for="entry-signature"><?php echo $entry_centinel_maps_url; ?></label>
-          <div class="col-sm-10"><input type="text" name="srs_pppro_threed_centinel_maps_url" value="<?php echo $srs_pppro_threed_centinel_maps_url; ?>" placeholder="<?php echo $entry_centinel_maps_url; ?>" class="form-control" />
-            <?php if ($error_centinel_maps_url) { ?>
-            <span class="text-danger"><?php echo $error_centinel_maps_url ; ?></span>
-            <?php } ?></div>
-          </div>
-
-
-
-
-
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-live-demo"><span data-toggle="tooltip" title="<?php echo $help_test; ?>"><?php echo $entry_test; ?></span></label>
             <div class="col-sm-10">

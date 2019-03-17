@@ -77,7 +77,7 @@
               $srs_pppro_threed_centinel_processor_id     = $this->config->get('srs_pppro_threed_centinel_processor_id');
               $srs_pppro_threed_centinel_marchant_id =      $this->config->get('srs_pppro_threed_centinel_marchant_id');
               $srs_pppro_threed_centinel_transaction_pwd=      $this->config->get('srs_pppro_threed_centinel_transaction_pwd');
-              $srs_pppro_threed_centinel_maps_url   =           $this->config->get('srs_pppro_threed_centinel_maps_url');
+              $srs_pppro_threed_centinel_maps_url   =  'https://paypal.cardinalcommerce.com/maps/txns.asp';       //  $this->config->get('srs_pppro_threed_centinel_maps_url');
 
 
             	define("CENTINEL_PROCESSOR_ID", $srs_pppro_threed_centinel_processor_id);

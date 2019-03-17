@@ -27,8 +27,10 @@ $API_Endpoint =API_ENDPOINT;
 $version=API_VERSION;
 
 $sid = session_id();
-if( empty ( $sid  ) ) 
-    @session_start();
+if( empty ( $sid  ) ) {
+
+	@session_start();
+}
 
 /**
   * hash_call: Function to perform the API call to PayPal using API signature

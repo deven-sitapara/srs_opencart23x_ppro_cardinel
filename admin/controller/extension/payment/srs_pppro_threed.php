@@ -176,13 +176,6 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 			$this->data['srs_pppro_threed_centinel_transaction_pwd'] = $this->config->get('srs_pppro_threed_centinel_transaction_pwd');
 		}
 
-                if (isset($this->request->post['srs_pppro_threed_centinel_maps_url'])) {
-			$this->data['srs_pppro_threed_centinel_maps_url'] = $this->request->post['srs_pppro_threed_centinel_maps_url'];
-		} else {
-			$this->data['srs_pppro_threed_centinel_maps_url'] = $this->config->get('srs_pppro_threed_centinel_maps_url');
-		}
-                ///
-
 		if (isset($this->request->post['srs_pppro_threed_test'])) {
 			$this->data['srs_pppro_threed_test'] = $this->request->post['srs_pppro_threed_test'];
 		} else {
@@ -280,10 +273,6 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 
                 if (!$this->request->post['srs_pppro_threed_centinel_transaction_pwd']) {
 			$this->error['error_centinel_transaction_pwd'] = $this->language->get('error_centinel_transaction_pwd');
-		}
-
-                if (!$this->request->post['srs_pppro_threed_centinel_maps_url']) {
-			$this->error['error_centinel_maps_url'] = $this->language->get('error_centinel_maps_url');
 		}
 
                 
