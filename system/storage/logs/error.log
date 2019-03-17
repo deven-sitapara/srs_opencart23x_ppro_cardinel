@@ -1,0 +1,37 @@
+2019-03-16 8:20:57 - PHP Notice:  Error: Could not load template D:/www/deven/products/3ds/2.3.0.2-compiled/upload/admin/view/template/payment/srs_pppro_threed.tpl! in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\system\library\template\php.php on line 23
+2019-03-16 8:21:50 - PHP Notice:  Error: Could not load template D:/www/deven/products/3ds/2.3.0.2-compiled/upload/admin/view/template/payment/srs_pppro_threed.tpl! in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\system\library\template\php.php on line 23
+2019-03-16 8:21:52 - PHP Notice:  Error: Could not load template D:/www/deven/products/3ds/2.3.0.2-compiled/upload/admin/view/template/payment/srs_pppro_threed.tpl! in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\system\library\template\php.php on line 23
+2019-03-16 8:21:58 - PHP Notice:  Error: Could not load template D:/www/deven/products/3ds/2.3.0.2-compiled/upload/admin/view/template/payment/srs_pppro_threed.tpl! in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\system\library\template\php.php on line 23
+2019-03-16 8:23:42 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:23:42 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:25:33 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:25:33 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:25:36 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:25:36 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:25:42 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:25:42 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:27:23 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:27:23 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:27:24 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:27:24 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:27:27 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:27:27 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:27:33 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:27:33 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:28:40 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:28:40 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:28:57 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:28:57 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:30:30 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:30:30 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:30:44 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:30:44 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:31:08 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:31:08 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 8:31:12 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 8:31:12 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 17:39:31 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105
+2019-03-16 17:39:31 - PHP Notice:  Undefined variable: help_total in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 150
+2019-03-16 17:43:35 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\system\library\mail.php on line 158
+2019-03-16 17:56:14 - PHP Warning:  Invalid argument supplied for foreach() in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\system\engine\loader.php on line 53
+2019-03-16 18:10:42 - PHP Notice:  Undefined variable: help_test in D:\www\deven\products\3ds\2.3.0.2-compiled\upload\admin\view\template\extension\payment\srs_pppro_threed.tpl on line 105

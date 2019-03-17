@@ -545,7 +545,8 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 			Log complete doDirectPayment request 
 		*/
 		global $API_Endpoint,$version,$API_UserName,$API_Password,$API_Signature,$nvp_Header;
-		$nvpreq_log="METHOD=".urlencode("doDirectPayment")."&PWD=".urlencode(API_PASSWORD)."&USER=".urlencode($API_UserName)."&SIGNATURE=".urlencode($API_Signature).$nvpstr;
+
+		$nvpreq_log="METHOD=".urlencode("doDirectPayment")."&PWD=".urlencode(API_PASSWORD)."&USER=".urlencode(API_USERNAME)."&SIGNATURE=".urlencode(API_SIGNATURE).$nvpstr;
         $this->log( "Payment doDirect Request  " , explode("&" , $nvpreq_log ) );
 
 
@@ -575,7 +576,7 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 
             $this->load->model('checkout/order');
 
-            $this->model_checkout_order->confirm($this->session->data['order_id'], $this->config->get('config_order_status_id'));
+            //$this->model_checkout_order->confirm($this->session->data['order_id'], $this->config->get('config_order_status_id'));
 
 			/*TIMESTAMP = 2010-01-07T14:48:10Z##
 			CORRELATIONID = 9de3693a92cd1##
@@ -626,9 +627,11 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 				$message .= 'VERSION: ' . $resArray['VERSION'] . "\n";
 			}
 
-			$this->model_checkout_order->update($this->session->data['order_id'], $this->config->get('srs_pppro_threed_order_status_id'), $message, FALSE);
+			//$this->model_checkout_order->update($this->session->data['order_id'], $this->config->get('srs_pppro_threed_order_status_id'), $message, FALSE);
+			$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('srs_pppro_threed_order_status_id'), $message, false);
 
- 
+
+			//$this->url->link('checkout/success');
                 ?><script type="text/javascript">window.parent.location='index.php?route=checkout/success'</script><?php
                   exit;
             } 

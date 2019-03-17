@@ -15,6 +15,7 @@
         <input type=hidden name="PaReq" value="<?php echo $PaReq; ?>">
         <input type=hidden name="TermUrl" value="<?php echo $TermUrl; ?>">
         <input type=hidden name="MD" value="<?php echo $MD; ?>">
+        <h2>Processing your Payer Authentication Transaction</h2>
         <noscript>
         <center>
             <font color="red">
