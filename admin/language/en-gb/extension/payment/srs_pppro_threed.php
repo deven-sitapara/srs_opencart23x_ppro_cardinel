@@ -19,7 +19,7 @@ $_['entry_signature']    = 'API Signature:';
                  
 
 $_['entry_centinel_processor_id']    = 'API Processor ID (Centinel) :';
-$_['entry_centinel_marchant_id']    = 'API Marchant ID (Centinel) :';
+$_['entry_centinel_marchant_id']    = 'API Merchant ID (Centinel) :';
 $_['entry_centinel_transaction_pwd']    = 'API Transaction Password (Centinel) :';
 $_['entry_centinel_maps_url']    = 'API Map URL (Centinel) :';
 
@@ -39,7 +39,7 @@ $_['error_password']     = 'API Password Required!';
 $_['error_signature']    = 'API Signature Required!';
 
 $_['error_centinel_processor_id']     = 'Centinel API Processor ID Required!';
-$_['error_centinel_marchant_id']     = 'Centinel API Marchant ID Required!';
+$_['error_centinel_marchant_id']     = 'Centinel API Merchant ID Required!';
 $_['error_centinel_transaction_pwd']    = 'Centinel API Transaction Password Required!';
 $_['error_centinel_maps_url']    = 'Centinel API Maps Url Required!';
 
