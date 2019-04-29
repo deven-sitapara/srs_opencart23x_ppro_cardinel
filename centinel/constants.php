@@ -52,12 +52,12 @@ Called by CallerService.php.
 	}
 
 
-define('API_USERNAME', 'devens_1212648101_biz_api1.yahoo.com');
-define('API_PASSWORD', '1212648105');
-define('API_SIGNATURE', 'AzCGiEDcAxYe4Za62nctouWWB65EAjbZJbCNxrhqKpiHcihKsHrXZvpb');
+	define('API_USERNAME', $srs_pppro_threed_username);
+	define('API_PASSWORD', $srs_pppro_threed_password);
+	define('API_SIGNATURE', $srs_pppro_threed_signature);
 
-define('API_ENDPOINT', $srs_pppro_end_point);
-define('PAYPAL_URL', $srs_pppro_pp_url);
+	define('API_ENDPOINT', $srs_pppro_end_point);
+	define('PAYPAL_URL', $srs_pppro_pp_url);
 
 
 /**
