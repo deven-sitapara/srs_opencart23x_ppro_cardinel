@@ -27,35 +27,38 @@ Called by CallerService.php.
  
 	if( $is_test )
 	{
-		/*define('API_USERNAME', 'devens_1257858297_biz_api1.yahoo.com');
-		define('API_PASSWORD', '1257858410');
-		define('API_SIGNATURE', 'ALWlC4wQqaBSFvlPsbqQfxVfmfTDAFkvxRaxyqyBOwn2F0FzYJwTTsYv');*/
-		
-		 define('API_USERNAME', 'devens_1212648101_biz_api1.yahoo.com');
-		define('API_PASSWORD', '1212648105');
-		define('API_SIGNATURE', 'AzCGiEDcAxYe4Za62nctouWWB65EAjbZJbCNxrhqKpiHcihKsHrXZvpb');  
-		
-		define('API_ENDPOINT', 'https://api-3t.sandbox.paypal.com/nvp');
-		define('PAYPAL_URL', 'https://www.sandbox.paypal.com/webscr&cmd=_express-checkout&token=');
-}else
-{
+
+		$srs_pppro_threed_username =  $this->config->get('srs_pppro_threed_username') ;
+		$srs_pppro_threed_password =  $this->config->get('srs_pppro_threed_password') ;
+		$srs_pppro_threed_signature =  $this->config->get('srs_pppro_threed_signature') ;
+		$srs_pppro_end_point =  'https://api-3t.sandbox.paypal.com/nvp';
+		$srs_pppro_pp_url =  'https://www.sandbox.paypal.com/webscr&cmd=_express-checkout&token=';
+
+		if(strlen($srs_pppro_threed_username) < 5 ){
+
+			$srs_pppro_threed_username =  'devens_1212648101_biz_api1.yahoo.com' ;
+			$srs_pppro_threed_password =  '1212648105';
+			$srs_pppro_threed_signature =  'AzCGiEDcAxYe4Za62nctouWWB65EAjbZJbCNxrhqKpiHcihKsHrXZvpb';
+
+		}
+
+	}else{
 
                 $srs_pppro_threed_username =  $this->config->get('srs_pppro_threed_username') ;
                 $srs_pppro_threed_password =  $this->config->get('srs_pppro_threed_password') ;
                 $srs_pppro_threed_signature =  $this->config->get('srs_pppro_threed_signature') ;
+                $srs_pppro_end_point =  'https://api-3t.paypal.com/nvp';
+                $srs_pppro_pp_url =  'https://www.paypal.com/webscr&cmd=_express-checkout&token=';
+	}
 
 
-                define('API_USERNAME', $srs_pppro_threed_username);
-		define('API_PASSWORD', $srs_pppro_threed_password);
-		define('API_SIGNATURE', $srs_pppro_threed_signature);
-		
-		define('API_ENDPOINT', 'https://api-3t.paypal.com/nvp');
-		define('PAYPAL_URL', 'https://www.paypal.com/webscr&cmd=_express-checkout&token=');
+define('API_USERNAME', 'devens_1212648101_biz_api1.yahoo.com');
+define('API_PASSWORD', '1212648105');
+define('API_SIGNATURE', 'AzCGiEDcAxYe4Za62nctouWWB65EAjbZJbCNxrhqKpiHcihKsHrXZvpb');
 
-}
+define('API_ENDPOINT', $srs_pppro_end_point);
+define('PAYPAL_URL', $srs_pppro_pp_url);
 
- 
-			 
 
 /**
 USE_PROXY: Set this variable to TRUE to route all the API requests through proxy.

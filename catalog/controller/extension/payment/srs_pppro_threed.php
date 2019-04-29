@@ -136,9 +136,9 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
  		$payment_data = array(
 			'METHOD'         => 'DoDirectPayment',
 			'VERSION'        => '51.0',
-			'USER'           => $this->config->get('pp_pro_username'),
-			'PWD'            => $this->config->get('pp_pro_password'),
-			'SIGNATURE'      => $this->config->get('pp_pro_signature'),
+			'USER'           => $this->config->get('srs_pppro_threed_username'), //srs_pppro_threed_username
+			'PWD'            => $this->config->get('srs_pppro_threed_password'),
+			'SIGNATURE'      => $this->config->get('srs_pppro_threed_signature'),
 			'CUSTREF'        => $order_info['order_id'],
 			'PAYMENTACTION'  => $payment_type,
 			'AMT'            => str_replace('.','',   $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], FALSE)),
@@ -652,9 +652,8 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 		$this->data['column_left'] = $this->load->controller('common/column_left');
 		$this->data['footer'] = $this->load->controller('common/footer');
 
+		$this->response->setOutput($this->load->view('extension/payment/dodirect_error', $this->data));
 
-		return $this->load->view('extension/payment/dodirect_error', $this->data);
-         
 
     }// dodirect_error
 
@@ -832,7 +831,7 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 
        	if(false) {
 
-			$fp = $fp = fopen(dirname( dirname(dirname(dirname(__FILE__)))).'/logfile1.txt','a+'); 
+			$fp = $fp = fopen(dirname( dirname(dirname(dirname(dirname(__FILE__))))).'/logfile1.txt','a+');
 
 			$temp = chr(13)."\n======================================= ". $title ." ========================================================\n";
             

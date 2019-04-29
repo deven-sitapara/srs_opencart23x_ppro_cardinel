@@ -55,7 +55,7 @@
     define('APP_CODE', 'demo');
     define('APP_URL', HTTPS_SERVER );
     
-    $is_test =  $this->config->get('srs_pppro_threed_test') ;
+    $is_test =  $this->config->get('srs_pppro_threed_test');
 
     
 
@@ -67,10 +67,20 @@
 	{
 
 
-		define("CENTINEL_PROCESSOR_ID", "202");
-		define("CENTINEL_MERCHANT_ID", "uatmerchant");
-		define("CENTINEL_TRANSACTION_PWD", "12345678");
-		define("CENTINEL_MAPS_URL", "https://centineltest.cardinalcommerce.com/maps/txns.asp");
+		$srs_pppro_threed_centinel_processor_id     = $this->config->get('srs_pppro_threed_centinel_processor_id');
+		$srs_pppro_threed_centinel_marchant_id =      $this->config->get('srs_pppro_threed_centinel_marchant_id');
+		$srs_pppro_threed_centinel_transaction_pwd=      $this->config->get('srs_pppro_threed_centinel_transaction_pwd');
+		$srs_pppro_threed_centinel_maps_url   =  'https://paypal.cardinalcommerce.com/maps/txns.asp';       //  $this->config->get('srs_pppro_threed_centinel_maps_url');
+
+		if(strlen($srs_pppro_threed_centinel_processor_id) < 5 ){
+
+			$srs_pppro_threed_centinel_processor_id     = 202;
+			$srs_pppro_threed_centinel_marchant_id =      'uatmerchant';
+			$srs_pppro_threed_centinel_transaction_pwd=      '12345678';
+			$srs_pppro_threed_centinel_maps_url   =  'https://centineltest.cardinalcommerce.com/maps/txns.asp';       //  $this->config->get('srs_pppro_threed_centinel_maps_url');
+
+		}
+
 	}
 	else
 	{
@@ -79,21 +89,15 @@
               $srs_pppro_threed_centinel_transaction_pwd=      $this->config->get('srs_pppro_threed_centinel_transaction_pwd');
               $srs_pppro_threed_centinel_maps_url   =  'https://paypal.cardinalcommerce.com/maps/txns.asp';       //  $this->config->get('srs_pppro_threed_centinel_maps_url');
 
-
-            	define("CENTINEL_PROCESSOR_ID", $srs_pppro_threed_centinel_processor_id);
-		define("CENTINEL_MERCHANT_ID", $srs_pppro_threed_centinel_marchant_id);
-		define("CENTINEL_TRANSACTION_PWD", $srs_pppro_threed_centinel_transaction_pwd);
-		define("CENTINEL_MAPS_URL", $srs_pppro_threed_centinel_maps_url);
-
-		//define("CENTINEL_TERM_URL", "https://tungsten/~myucha/php/curl/3ds/ccAuthenticate.php");
-
-
-
 	}
 
-       
 
-       define("CENTINEL_TERM_URL",  str_replace( 'http:' , 'http:', APP_URL ) ."index.php?route=extension/payment/srs_pppro_threed/srs_authenticate");
+	define("CENTINEL_PROCESSOR_ID", $srs_pppro_threed_centinel_processor_id);
+	define("CENTINEL_MERCHANT_ID", $srs_pppro_threed_centinel_marchant_id);
+	define("CENTINEL_TRANSACTION_PWD", $srs_pppro_threed_centinel_transaction_pwd);
+	define("CENTINEL_MAPS_URL", $srs_pppro_threed_centinel_maps_url);
+
+    define("CENTINEL_TERM_URL",  str_replace( 'http:' , 'http:', APP_URL ) ."index.php?route=extension/payment/srs_pppro_threed/srs_authenticate");
 	
     // Check with Cardinal to determine appropriate Timeout period for this payment type
 	define("CENTINEL_TIMEOUT_CONNECT","100");

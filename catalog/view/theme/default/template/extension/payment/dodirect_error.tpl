@@ -3,10 +3,6 @@
     <div class="top">
         <h1>Paypal Transaction error</h1>
     </div>
-</div>
-<div class="middle">
-
-
     <form name="frmResultPage" method="POST" action="index.php?route=checkout/cart" target="_parent">
 
         <?php  $resArray=$_SESSION['reshash']; ?>
@@ -118,8 +114,6 @@
         <center><input type="submit" value="Try again"></center>
     </form>
 
-
-</div>
 
 </div>
 <?php echo $footer; ?>
