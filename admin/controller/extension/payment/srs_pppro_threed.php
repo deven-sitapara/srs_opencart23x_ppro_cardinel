@@ -39,10 +39,10 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 		$this->data['entry_password'] = $this->language->get('entry_password');
 		$this->data['entry_signature'] = $this->language->get('entry_signature');
 
-                $this->data['entry_centinel_processor_id'] = $this->language->get('entry_centinel_processor_id');
-                $this->data['entry_centinel_marchant_id'] = $this->language->get('entry_centinel_marchant_id');
-                $this->data['entry_centinel_transaction_pwd'] = $this->language->get('entry_centinel_transaction_pwd');
-                $this->data['entry_centinel_maps_url'] = $this->language->get('entry_centinel_maps_url');
+		$this->data['entry_centinel_processor_id'] = $this->language->get('entry_centinel_processor_id');
+		$this->data['entry_centinel_marchant_id'] = $this->language->get('entry_centinel_marchant_id');
+		$this->data['entry_centinel_transaction_pwd'] = $this->language->get('entry_centinel_transaction_pwd');
+		$this->data['entry_centinel_maps_url'] = $this->language->get('entry_centinel_maps_url');
                 
 
 		$this->data['entry_test'] = $this->language->get('entry_test');
@@ -87,8 +87,8 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 		}
 
 
-                //Centinel Error 
-                if (isset($this->error['error_centinel_processor_id'])) {
+		//Centinel Error 
+		if (isset($this->error['error_centinel_processor_id'])) {
 			$this->data['error_centinel_processor_id'] = $this->error['error_centinel_processor_id'];
 		} else {
 			$this->data['error_centinel_processor_id'] = '';
@@ -114,7 +114,7 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 			$this->data['error_centinel_maps_url'] = '';
 		}
 
-				$this->document->breadcrumbs = array();
+		$this->document->breadcrumbs = array();
 
    		 
 		$this->data['breadcrumbs'][] = array(
@@ -158,7 +158,7 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 		}
 		
                 ////3d secure -- centinel API
-                if (isset($this->request->post['srs_pppro_threed_centinel_processor_id'])) {
+        if (isset($this->request->post['srs_pppro_threed_centinel_processor_id'])) {
 			$this->data['srs_pppro_threed_centinel_processor_id'] = $this->request->post['srs_pppro_threed_centinel_processor_id'];
 		} else {
 			$this->data['srs_pppro_threed_centinel_processor_id'] = $this->config->get('srs_pppro_threed_centinel_processor_id');
@@ -170,10 +170,16 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 			$this->data['srs_pppro_threed_centinel_marchant_id'] = $this->config->get('srs_pppro_threed_centinel_marchant_id');
 		}
 
-                if (isset($this->request->post['srs_pppro_threed_centinel_transaction_pwd'])) {
+        if (isset($this->request->post['srs_pppro_threed_centinel_transaction_pwd'])) {
 			$this->data['srs_pppro_threed_centinel_transaction_pwd'] = $this->request->post['srs_pppro_threed_centinel_transaction_pwd'];
 		} else {
 			$this->data['srs_pppro_threed_centinel_transaction_pwd'] = $this->config->get('srs_pppro_threed_centinel_transaction_pwd');
+		}
+
+		if (isset($this->request->post['srs_pppro_threed_centinel_maps_url'])) {
+			$this->data['srs_pppro_threed_centinel_maps_url'] = $this->request->post['srs_pppro_threed_centinel_maps_url'];
+		} else {
+			$this->data['srs_pppro_threed_centinel_maps_url'] = $this->config->get('srs_pppro_threed_centinel_maps_url');
 		}
 
 		if (isset($this->request->post['srs_pppro_threed_test'])) {
@@ -263,20 +269,24 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 
 
               // Centinel validation
-                if (!$this->request->post['srs_pppro_threed_centinel_processor_id']) {
+        if (!$this->request->post['srs_pppro_threed_centinel_processor_id']) {
 			$this->error['error_centinel_processor_id'] = $this->language->get('error_centinel_processor_id');
 		}
 
-                if (!$this->request->post['srs_pppro_threed_centinel_marchant_id']) {
+        if (!$this->request->post['srs_pppro_threed_centinel_marchant_id']) {
 			$this->error['error_centinel_marchant_id'] = $this->language->get('error_centinel_marchant_id');
 		}
 
-                if (!$this->request->post['srs_pppro_threed_centinel_transaction_pwd']) {
+        if (!$this->request->post['srs_pppro_threed_centinel_transaction_pwd']) {
 			$this->error['error_centinel_transaction_pwd'] = $this->language->get('error_centinel_transaction_pwd');
+		}
+		
+		if (!$this->request->post['srs_pppro_threed_centinel_maps_url']) {
+			$this->error['error_centinel_maps_url'] = $this->language->get('error_centinel_maps_url');
 		}
 
                 
-                if (!$this->error) {
+        if (!$this->error) {
 			return TRUE;
 		} else {
 			return FALSE;
