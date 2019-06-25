@@ -7,7 +7,6 @@ class ControllerExtensionPaymentSrsPpproThreed extends Controller {
 
         $this->language->load('extension/payment/srs_pppro_threed');
 
-        $order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
  		$this->data['text_credit_card'] = $this->language->get('text_credit_card');
 		$this->data['text_start_date'] = $this->language->get('text_start_date');
